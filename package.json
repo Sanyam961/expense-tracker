@@ -1,0 +1,21 @@
+{
+  "name": "exprense-traker-system-for-college-students",
+  "version": "1.0.0",
+  "description": "```\r student-expense-tracker/\r ├── backend/\r │   ├── package.json\r │   ├── server.js\r │   ├── db.js\r │   └── routes/\r │       ├── auth.js\r │       └── expenses.js\r ├── frontend/\r │   ├── index.html\r │   ├── login.html\r │   ├── register.html\r │   ├── css/\r │   │   └── style.css\r │   └── js/\r │       ├── api.js\r │       ├── auth.js\r │       └── dashboard.js\r ├── database.sql\r └── README.md\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.4",
+    "axios": "^1.15.2",
+    "chart.js": "^4.5.1",
+    "lucide-react": "^1.8.0",
+    "react-chartjs-2": "^5.3.1",
+    "react-router-dom": "^7.14.2",
+    "tailwindcss": "^4.2.4"
+  }
+}
