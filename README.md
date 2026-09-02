@@ -1,5 +1,6 @@
 ﻿# 💰 College Student Expense Tracker & Financial Intelligence System
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20App-success?style=for-the-badge&logo=google-chrome&logoColor=white)](https://sanyam961.github.io/expense-tracker/)
 [![React](https://img.shields.io/badge/Frontend-React%2018%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Node.js](https://img.shields.io/badge/Backend-Node.js%20%2F%20Express-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
@@ -137,3 +138,4 @@ expense-tracker/
 ## 📄 License
 
 This project is licensed under the MIT License.
+
