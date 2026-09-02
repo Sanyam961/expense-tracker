@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as api from './api';
 import { Moon, Sun } from 'lucide-react';
@@ -61,16 +61,19 @@ export default function Auth({ isLogin }) {
             <div className="absolute top-4 right-4">
                 <button
                     onClick={() => setDarkMode(!darkMode)}
-                    className="p-2 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 shadow-md hover:ring-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="p-2 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 shadow-md hover:ring-2 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
                 >
                     {darkMode ? <Sun size={24} /> : <Moon size={24} />}
                 </button>
             </div>
 
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">
-                    {isLogin ? 'Sign in to your account' : 'Register a new account'}
+                <h2 className="text-center text-3xl font-extrabold text-gray-900 dark:text-white">
+                    {isLogin ? 'Sign in to your account' : 'Create your account'}
                 </h2>
+                <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                    Student Expense Tracker & Intelligence System
+                </p>
             </div>
 
             <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
@@ -123,7 +126,7 @@ export default function Auth({ isLogin }) {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 cursor-pointer"
                             >
                                 {loading ? 'Processing...' : (isLogin ? 'Sign in' : 'Register')}
                             </button>
@@ -140,10 +143,24 @@ export default function Auth({ isLogin }) {
                             </div>
                         </div>
 
+                        <div className="mt-4">
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    localStorage.setItem('token', 'demo-token');
+                                    localStorage.setItem('user', JSON.stringify({ user_id: 999, name: 'Sanyam Sharma (Guest)', email: 'sanyam@college.edu' }));
+                                    navigate('/');
+                                }}
+                                className="w-full flex justify-center py-2.5 px-4 border border-emerald-500 rounded-md shadow-sm text-sm font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 transition cursor-pointer"
+                            >
+                                🚀 Instant Demo Login (Explore Live Site)
+                            </button>
+                        </div>
+
                         <div className="mt-6 text-center">
                             <button
                                 onClick={() => navigate(isLogin ? '/register' : '/login')}
-                                className="font-medium text-blue-600 hover:text-blue-500"
+                                className="font-medium text-blue-600 hover:text-blue-500 cursor-pointer"
                             >
                                 {isLogin ? 'Create a new account' : 'Sign in instead'}
                             </button>
